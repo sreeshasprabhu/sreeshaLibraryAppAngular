@@ -1,0 +1,34 @@
+
+                    
+    <div class="container mt-5 ">
+      <div class="row ">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-5">
+          <form  (ngSubmit)="AddBook()">
+                 
+            <div class="form-group  ">
+                <label class="p-3" >Name of the book</label>
+                <input type="text" class="form-control" name="title" id="name" placeholder="Name of the book" [(ngModel)]="bookItem.title" >
+              </div>
+              <div class="form-group ">
+                <label class="p-3" >Author</label>
+                <input type="text" class="form-control" name="author" id="author" placeholder="Author" [(ngModel)]="bookItem.author">
+              </div>
+              <div class="form-group ">
+                <label class="p-3" >Genre</label>
+                <input type="text" class="form-control" name="genre" id="genre" placeholder="Genre"[(ngModel)]="bookItem.genre" >
+              </div>                 
+              <div class="form-group ">
+                <label class="p-3" >Image</label>
+                <input type="text" class="form-control" name="image" id="image" placeholder="image" [(ngModel)]="bookItem.image">           
+                </div>
+            <div class="form-group text-center">
+            <button type="submit" class="btn btn-info btn-lg " name="" >Submit</button>
+         </div>
+          </form>
+        </div>
+      </div>
+
+    </div>                                                                              
+ 
+  

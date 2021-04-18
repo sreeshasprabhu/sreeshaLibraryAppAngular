@@ -1,0 +1,29 @@
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+       <div class="collapse navbar-collapse " id="navbarNav" >
+        
+         <ul class="navbar-nav navbar-right">
+           <!-- <a class="navbar-brand" href="#">
+               <img src="./assets/images/flogo.png" alt="Logo" style="width:175px;">
+             </a> -->
+             <a class="nav-link active header" routerLink="" *ngIf="!_auth.loggedIn() ">Home</a>
+             <a class="nav-link active header" routerLink="/books" *ngIf="!_auth.loggedIn() || _auth.loggedIn()">Books</a>
+             <a class="nav-link active header" routerLink="/authors" *ngIf="!_auth.loggedIn()|| _auth.loggedIn() " >Authors</a>
+             <a class="nav-link active header" routerLink="/signup" *ngIf="!_auth.loggedIn()" >SignUp</a> 
+             <a class="nav-link active header" routerLink="/login" *ngIf="!_auth.loggedIn()">Login</a> 
+             <a class="nav-link active header"  routerLink="/addbook" *ngIf="_auth.loggedIn()" style="cursor:pointer" >Add Book</a>
+             <a class="nav-link active header" routerLink="/addauthor" *ngIf="_auth.loggedIn()">Add authors</a>
+             <a class="nav-link active header" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="logoutUser()" >LogOut</a>
+                        
+          </ul>
+       
+       </div>
+       
+   </nav>   
+   </div>
+      
+      

@@ -1,0 +1,20 @@
+<div class="container mt-5" *ngFor='let author of authors'>
+    <h4>{{ author.name }}</h4>
+   <div class="row text-center mb-3">
+       <div class="col-md-4">
+           <div class="imgAbt">
+               <img src="{{ author.image }}" style="width:200px;height:200px" class="rounded-circle"/>
+           </div>
+       </div>
+       <div class="col-xs-9">
+        <h4><span class="label label-default">{{ author.genre }}</span></h4>
+        <!-- <h5><span class="label label-default">{{ book.genre }}</span></h5> -->
+
+    </div>
+       <div class="col-md-4">
+           <!-- <p>Lots of text here...With the four tiers of grids available you're bound to run into issues where, at certain breakpoints, your columns don't clear quite right as one is taller than the other. To fix that, use a combination of a .clearfix and o</p> -->
+       </div>
+       <div class="col-xs-3"></div>
+    </div>
+    <br><br>
+    </div>

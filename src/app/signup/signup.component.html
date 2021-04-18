@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-5">
+            <form  #userSignUp="ngForm" (ngSubmit)="AddUser()" >
+                <div class="form-group ">
+                    <label class="p-3" >First Name</label>
+                    <input type="text" class="form-control" name="firstname" id="fname" #firstname="ngModel" maxlength="32" [(ngModel)]="userItem.firstname" [class.is-invalid]="firstname.invalid && firstname.touched" pattern="[A-Za-z ]{1,32}" placeholder=" Enter alphabet characters only" required>
+                    
+                  </div>
+                  <div class="form-group">
+                    <label >Last Name</label>
+                   <input type="text" class="form-control" name="lastname" id="sname" placeholder="Last Name" #secondname="ngModel" maxlength="32" [(ngModel)]="userItem.lastname" [class.is-invalid]="secondname.invalid && secondname.touched" pattern="[A-Za-z ]{1,32}" placeholder=" Enter alphabet characters only" required >     
+                  </div>
+                <div class="form-group">
+                  <label>Email address</label>
+                  <input type="text" class="form-control" name="email" id="email" placeholder="Enter email" #email="ngModel" [(ngModel)]="userItem.email" [class.is-invalid]="email.invalid && email.touched" pattern="^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$" placeholder="Enter valid email" required>
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  
+                </div>
+                <div class="form-group">
+                  <label >Password</label>
+                  <input type="password" class="form-control" name="password" id="pass" #pass="ngModel" minlength="6"  [(ngModel)]="userItem.password" [class.is-invalid]="pass.invalid && pass.touched" placeholder="Minimum 6 characters" required>
+                     
+                </div>
+                
+                  <div class="form-group">
+                    <label >Phone Number</label>
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Mobile Number" #phone="ngModel"  [class.is-invalid]="phone.invalid && phone.touched" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" [(ngModel)]="userItem.phone" placeholder="please enter 10 numbers" required >
+                  </div>
+                  <div class="form-group text-center">
+                <button type="submit" class="btn btn-info btn-lg " name="" [disabled]="userSignUp.form.invalid">Submit</button>
+             </div>
+              </form>
+
+        </div>
+
+    </div>
+
+</div>
